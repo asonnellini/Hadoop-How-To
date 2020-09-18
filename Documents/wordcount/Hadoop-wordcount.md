@@ -21,9 +21,10 @@ We assume that:
 
   - The idea is to write:
     
-      - mapper that parses lines from a text and for each word in the
+      - a mapper that parses lines from a text and for each word in the
         text outputs a tuple where they key is the word itself and the
-        value is 1 – see for example mapper.py
+        value is 1 
+        – see for example mapper.py
         
         The same word will then appear multiple times in the set of
         tuples
