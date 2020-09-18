@@ -50,30 +50,30 @@ We assume that:
 
   - Run the below command ensuring that:
     
-      - The option \`\`\` -file \`\`\` point to the mapper.py and
+      - The option ``` -file ``` point to the mapper.py and
         reducer.py files
     
-      - The option \`\`\` -input \`\`\` points to the path of the text
+      - The option ``` -input ``` points to the path of the text
         file on the hdfs
     
-      - The option \`\`\` -output \`\`\` points to a folder which does
+      - The option ``` -output ``` points to a folder which does
         not exists yet
 
-\`\`\`
+```
 
 yarn jar /usr/hdp/current/hadoop-mapreduce-client/hadoop-streaming.jar
 -file mapper.py -mapper "python mapper.py" -file reducer.py -reducer
 "python reducer.py" -input data/wordcount/inputTest.txt -output
 data/wordcount/output
 
-\`\`\`
+```
 
   - Once the command is executed, information about its execution are
     displayed
 
   - The final output of the reducer is by default returned in the folder
     pointed by the -output flag of the previous command – in our case it
-    was the directory \`\`\`data/wordcount/output\`\`\`
+    was the directory ```data/wordcount/output```
 
 ![](.//media/image4.png)
 
