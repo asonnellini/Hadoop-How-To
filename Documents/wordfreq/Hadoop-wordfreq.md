@@ -1,7 +1,7 @@
 # Overview
 
 Following on from the [tutorial on map-reduce to count the words from a
-text](https://github.com/asonnellini/Hadoop-How-To/blob/asonnellini-patch-2/Documents/wordcount/Hadoop-wordcount.md#overview), in this tutorial I will show how to implement a map-reduce that
+text](https://github.com/asonnellini/Hadoop-How-To/blob/master/Documents/wordcount/Hadoop-wordcount.md#overview), in this tutorial I will show how to implement a map-reduce that
 takes in input the tuples that have the number of occurrences of each
 word in a text, and extract the tuple with the highest count.
 
