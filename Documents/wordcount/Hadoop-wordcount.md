@@ -40,7 +40,7 @@ We assume that:
     which you have permissions
     
     For example in our case the text file was stored in
-    data/wordcount/inputTest.txt
+    ```data/wordcount/inputTest.txt```
 
 ![](.//media/image2.png)
 
