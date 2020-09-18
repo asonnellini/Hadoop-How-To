@@ -10,7 +10,8 @@ successfully run and printed on hdfs its output on
 data/wordcount/output/part-00000.
 
 # Steps
-
+  - Connect to the Edge Node
+  
   - Create on the edge node a mapper and reducer python file like
     mapper\_most\_freq.py and reducer\_most\_freq.py attached
     
