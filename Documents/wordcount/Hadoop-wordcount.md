@@ -18,6 +18,7 @@ We assume that:
     in conjunction with custom mapper.py and reducer.py
 
 # Steps
+  - Connect to the Edge Node
 
   - The idea is to write:
     
