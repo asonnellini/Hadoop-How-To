@@ -8,16 +8,18 @@ HIVE table that relies on an OCV file stored on the HDFS.
 
 I will assume that:
 
-  - The csv file name is drivers.csv
+  - The csv file name is drivers.csv and is already on the Edge Node
 
   - **beeline** client is installed on the Edge Node
 
-  - We have access to a Database named dsti\_2020\_fall\_1 on the Hadoop
+  - We have access to a Hive Database named dsti\_2020\_fall\_1 on the Hadoop
     Platform
 
 # Steps
 
-  - First step is to check the content of the csv file, and in
+  - Connect to the Edge Node
+
+  - Check the content of the csv file, and in
     particular if there is a header and what is the datatype of each
     entry
 
@@ -38,7 +40,7 @@ I will assume that:
 
   - Create the proper External Table in Hive:
     
-      - Connect to linebee:
+      - Connect to beeline:
         
         \`\`\`
         
