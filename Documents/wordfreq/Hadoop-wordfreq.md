@@ -28,14 +28,14 @@ data/wordcount/output/part-00000.
   - Run the above new map-reduce taking in input the text file that was
     outputted from the previous map-reduce that counted words
 
-\`\`\`
+```
 
 yarn jar /usr/hdp/current/hadoop-mapreduce-client/hadoop-streaming.jar
 -file mapper\_most\_freq.py -mapper "python mapper\_most\_freq.py" -file
 reducer\_most\_freq.py -reducer "python reducer\_most\_freq.py" -input
 data/wordcount/output/part-00000 -output data/wordfreq/output
 
-\`\`\`
+```
 
   - The output file confirms the map-reduce worked:
 
