@@ -23,16 +23,14 @@ We assume that:
     
       - a mapper that parses lines from a text and for each word in the
         text outputs a tuple where they key is the word itself and the
-        value is 1 
-          – see for example mapper.py
+        value is 1 – see for example mapper.py
         
         The same word will then appear multiple times in the set of
         tuples
     
       - reducer that takes in input the tuples produced by the mapper
         and returns a set of tuples where each tuple is made of a key
-        equal to the word and a value equal to the number of occurrences
-        - see for example reducer.py
+        equal to the word and a value equal to the number of occurrences - see for example reducer.py
 
   - Both mapper.py and reducer.py should be placed in the edge node:
 
@@ -75,7 +73,7 @@ data/wordcount/output
 
   - The final output of the reducer is by default returned in the folder
     pointed by the -output flag of the previous command – in our case it
-    was the directory output
+    was the directory \`\`\`data/wordcount/output\`\`\`
 
 ![](.//media/image4.png)
 
