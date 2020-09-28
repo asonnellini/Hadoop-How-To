@@ -12,7 +12,7 @@ I will assume that:
 
   - **beeline** client is installed on the Edge Node
 
-  - We have access to a Hive Database named dsti\_2020\_fall\_1 on the Hadoop
+  - We have access to a Hive Database named dsti_2020_fall_1 on the Hadoop
     Platform
 
 # Steps
@@ -37,6 +37,17 @@ I will assume that:
     sed -i 1d drivers\_noheader.csv
     
     ```
+
+  - Store the csv file on HDFS in folder "data/drivers"
+    ```
+    hdfs dfs -mkdir data/drivers
+    ```
+
+  - Store the file on HDFS:
+  
+    ```
+    hdfs dfs -put  drivers.csv data/drivers
+    ```  
 
   - Create the proper External Table in Hive:
     
