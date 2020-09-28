@@ -74,14 +74,13 @@ I will assume that:
         
         Remember to end the SQL statement with a semicolumn
         
-        Note: this table is going to be “in synch” with the csv files in
+        Note: this table is going to show results of a query applied to the data in the csv files in
         the folder data/drivers:
         
           - if you remove csv files from the folder, the table will not
             show any data;
         
-          - if you add a csv file to the folder, the new data will be
-            imported
+          - if you add a csv file to the folder, the new data will be taken into acount when running queries
             
             Query:
             
