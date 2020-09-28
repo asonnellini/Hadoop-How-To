@@ -45,7 +45,7 @@ I will assume that:
         ```
         
         beeline -u
-        "jdbc:hive2://zoo-1.au.adaltas.cloud:2181,zoo-2.au.adaltas.cloud:2181,zoo-3.au.adaltas.cloud:2181/dsti;serviceDiscoveryMode=zooKeeper;zooKeeperNamespace=hiveserver2;"
+        "jdbc:hive2://zoo-1.<>,zoo-2.<>,zoo-3.:<>/dsti;serviceDiscoveryMode=zooKeeper;zooKeeperNamespace=hiveserver2;"
         
         ```
     
@@ -76,7 +76,7 @@ I will assume that:
             
             ```
             
-            CREATE EXTERNAL TABLE IF NOT EXISTS Sonne\_drivers\_csv
+            CREATE EXTERNAL TABLE IF NOT EXISTS Sonne_drivers_csv
             (driverId int, name string, ssn integer, location string,
             certified string, wageplan string) ROW FORMAT DELIMITED
             FIELDS TERMINATED BY "," STORED AS TEXTFILE LOCATION
@@ -99,7 +99,7 @@ I will assume that:
     CREATE TABLE IF NOT EXISTS Sonne\_drivers\_orc(driverId int, name
     string, ssn integer, location string, certified string, wageplan
     string) COMMENT 'Data about drivers from a public database' ROW
-    FORMAT DELIMITED FIELDS TERMINATED BY ',' STORED AS ORC;
+    FORMAT DELIMITED FIELDS TERMINATED BY ',' STORED AS ORC LOCATION "data/drivers_orc" ;
     
     ```
 
