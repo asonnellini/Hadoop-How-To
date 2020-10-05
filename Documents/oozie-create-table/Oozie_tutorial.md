@@ -60,5 +60,5 @@ Sample files mentioned in the below tutorials are uploaded on this github folder
 
   - Run the below command from the edge node:
     
-      - oozie job -oozie http://oozie-1.au.adaltas.cloud:11000/oozie
+      - oozie job -oozie http://oozie-1.provider.cloud:11000/oozie
         -config job.properties -run
