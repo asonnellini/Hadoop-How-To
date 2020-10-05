@@ -1,0 +1,1 @@
+CREATE EXTERNAL TABLE IF NOT EXISTS Sonne_drivers_csv (driverId int, name string, ssn integer, location string, certified string, wageplan string) ROW FORMAT DELIMITED FIELDS TERMINATED BY "," STORED AS TEXTFILE LOCATION "data/drivers";
