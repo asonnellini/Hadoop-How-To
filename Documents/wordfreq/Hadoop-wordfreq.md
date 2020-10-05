@@ -1,4 +1,6 @@
-# Overview
+# How to create a map reduce to extract the most frequent word from a text
+
+## Overview
 
 Following on from the [tutorial on map-reduce to count the words from a
 text](https://github.com/asonnellini/Hadoop-How-To/blob/master/Documents/wordcount/Hadoop-wordcount.md#overview), in this tutorial I will show how to implement a map-reduce that
@@ -9,7 +11,7 @@ So we are assuming that the map-reduce of the previous tutorial was
 successfully run and printed on hdfs its output on
 data/wordcount/output/part-00000.
 
-# Steps
+## Steps
   - Connect to the Edge Node
   
   - Create on the edge node a mapper and reducer python file like
