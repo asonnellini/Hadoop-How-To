@@ -12,7 +12,7 @@ I will assume that:
 
   - **beeline** client is installed on the Edge Node
 
-  - We have access to a Hive Database named dsti\_2020\_fall\_1 on the Hadoop
+  - We have access to a Hive Database named dsti_2020_fall_1 on the Hadoop
     Platform
 
 # Steps
@@ -38,6 +38,17 @@ I will assume that:
     
     ```
 
+  - Store the csv file on HDFS in folder "data/drivers"
+    ```
+    hdfs dfs -mkdir data/drivers
+    ```
+
+  - Store the file on HDFS:
+  
+    ```
+    hdfs dfs -put  drivers.csv data/drivers
+    ```  
+
   - Create the proper External Table in Hive:
     
       - Connect to beeline:
@@ -45,7 +56,7 @@ I will assume that:
         ```
         
         beeline -u
-        "jdbc:hive2://zoo-1.au.adaltas.cloud:2181,zoo-2.au.adaltas.cloud:2181,zoo-3.au.adaltas.cloud:2181/dsti;serviceDiscoveryMode=zooKeeper;zooKeeperNamespace=hiveserver2;"
+        "jdbc:hive2://zoo-1.<>,zoo-2.<>,zoo-3.:<>/dsti;serviceDiscoveryMode=zooKeeper;zooKeeperNamespace=hiveserver2;"
         
         ```
     
@@ -63,20 +74,19 @@ I will assume that:
         
         Remember to end the SQL statement with a semicolumn
         
-        Note: this table is going to be “in synch” with the csv files in
+        Note: this table is going to show results of a query applied to the data in the csv files in
         the folder data/drivers:
         
           - if you remove csv files from the folder, the table will not
             show any data;
         
-          - if you add a csv file to the folder, the new data will be
-            imported
+          - if you add a csv file to the folder, the new data will be taken into acount when running queries
             
             Query:
             
             ```
             
-            CREATE EXTERNAL TABLE IF NOT EXISTS Sonne\_drivers\_csv
+            CREATE EXTERNAL TABLE IF NOT EXISTS Sonne_drivers_csv
             (driverId int, name string, ssn integer, location string,
             certified string, wageplan string) ROW FORMAT DELIMITED
             FIELDS TERMINATED BY "," STORED AS TEXTFILE LOCATION
@@ -99,7 +109,7 @@ I will assume that:
     CREATE TABLE IF NOT EXISTS Sonne\_drivers\_orc(driverId int, name
     string, ssn integer, location string, certified string, wageplan
     string) COMMENT 'Data about drivers from a public database' ROW
-    FORMAT DELIMITED FIELDS TERMINATED BY ',' STORED AS ORC;
+    FORMAT DELIMITED FIELDS TERMINATED BY ',' STORED AS ORC LOCATION "data/drivers_orc" ;
     
     ```
 
