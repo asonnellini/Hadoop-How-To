@@ -3,7 +3,7 @@
 ## Overview
 
 The target of this tutorial is to use oozie to automate the creation of the External
-and ORC tables in Hive that was detailed in the previous tutorial.
+and ORC tables in Hive [that was detailed in the previous tutorial](https://github.com/asonnellini/Hadoop-How-To/blob/master/Documents/Create-Hive-Table/Hadoop-How-to-Hive-Create-Table.md#overview).
 
 We expect oozie to be already configured server side.
 
@@ -13,7 +13,7 @@ Sample files mentioned in the below tutorials are uploaded on this github folder
 
   - Connect to the Edge Node
 
-  - Create 3 hql scripts – you can refer to the previous tutorial for
+  - Create 3 hql scripts – you can refer to the [previous tutorial](https://github.com/asonnellini/Hadoop-How-To/blob/master/Documents/Create-Hive-Table/Hadoop-How-to-Hive-Create-Table.md#overview) for
     further details:
     
       - CREATE\_EXTERNAL\_TABLE.hql script to create an external table
