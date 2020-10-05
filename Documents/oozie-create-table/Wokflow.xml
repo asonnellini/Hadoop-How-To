@@ -1,0 +1,52 @@
+<workflow-app xmlns = "uri:oozie:workflow:0.4" name = "certified-drivers">
+  <global>
+    <job-tracker>${jobTracker}</job-tracker>
+    <name-node>${nameNode}</name-node>
+  </global>
+
+  <start to = "change_db" />
+
+<action name = "change_db">
+    <hive2 xmlns = "uri:oozie:hive2-action:0.1">
+        <job-tracker>${jobTracker}</job-tracker>
+            <name-node>${nameNode}</name-node>
+                <job-xml>hive-site.xml</job-xml>
+      <jdbc-url>${jdbcUrl}</jdbc-url>
+      <script>oozie-test/firstTest/DSTI_DB.hql</script> <!-- This is a HDFS path -->
+    </hive2>
+    <ok to = "create_external_csv_table"/> <!-- points to the next action -->
+    <error to = "kill_job" />
+  </action>
+
+  <action name = "create_external_csv_table">
+    <hive2 xmlns = "uri:oozie:hive2-action:0.1">
+        <job-tracker>${jobTracker}</job-tracker>
+            <name-node>${nameNode}</name-node>
+      <jdbc-url>${jdbcUrl}</jdbc-url>
+      <script>oozie-test/firstTest/CREATE_EXTERNAL_TABLE.hql</script> <!-- This is a HDFS path -->
+    </hive2>
+    <ok to = "create_managed_orc_table" /> <!-- points to the next action -->
+    <error to = "kill_job" />
+  </action>
+
+  <!-- Try to chain more actions here -->
+
+        <action name = "create_managed_orc_table">
+    <hive2 xmlns = "uri:oozie:hive2-action:0.1">
+        <job-tracker>${jobTracker}</job-tracker>
+            <name-node>${nameNode}</name-node>
+      <jdbc-url>${jdbcUrl}</jdbc-url>
+      <script>oozie-test/firstTest/CREATE_MANAGED_TABLE.hql</script> <!-- This is a HDFS path -->
+    </hive2>
+    <ok to = "end" /> <!-- points to the next action -->
+    <error to = "kill_job" />
+  </action>
+
+
+
+  <kill name = "kill_job">
+    <message>Job failed</message>
+  </kill>
+
+  <end name = "end" />
+</workflow-app>
