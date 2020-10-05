@@ -2,7 +2,7 @@
 
 ## Overview
 
-The target of this tutorial is to automate the creation of the External
+The target of this tutorial is to use oozie to automate the creation of the External
 and ORC tables in Hive that was detailed in the previous tutorial.
 
 We expect oozie to be already configured server side.
