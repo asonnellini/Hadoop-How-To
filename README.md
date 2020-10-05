@@ -1,5 +1,5 @@
 # Hadoop-How-To
-This repository describes the steps I followed to practice with Hadoop during the Hadoop class at DSTI.
+This repository collects the documentation I produced while practicing on Hadoop.
 
   - [How to build a map-reduce that extract words from a text](https://github.com/asonnellini/Hadoop-How-To/blob/master/Documents/wordcount/Hadoop-wordcount.md#overview)
   - [How to build a map-reduce that extract the most frequent word from a text (follow-up from previous tutorial)](https://github.com/asonnellini/Hadoop-How-To/blob/master/Documents/wordfreq/Hadoop-wordfreq.md#how-to-create-a-map-reduce-to-extract-the-most-frequent-word-from-a-text)
