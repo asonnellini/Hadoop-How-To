@@ -7,6 +7,8 @@ and ORC tables in Hive that was detailed in the previous tutorial.
 
 We expect oozie to be already configured server side.
 
+Sample files mentioned in the below tutorials are uploaded on this github folder.
+
 ## Steps
 
   - Connect to the Edge Node
